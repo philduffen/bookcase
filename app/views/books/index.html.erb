@@ -1,0 +1,26 @@
+<h1><%= pluralize(@books.size, 'Book') %></h1>
+
+<% @books.each do |book| %>
+  <article>
+    <header>
+      <h2><%= link_to book.title, book_path(book.id) %></h2>
+    </header>
+    <p>
+      <%= truncate(book.description, length: 40, separator: ' ') %>
+    </p>
+    <table>
+      <tr>
+        <th>Author:</th>
+        <td><%= book.author %></td>
+      </tr>
+      <tr>
+        <th>ISBN:</th>
+        <td><%= book.isbn %></td>
+      </tr>
+      <tr>
+        <th>Format:</th>
+        <td><%= book.format %></td>
+      </tr>
+    </table>
+  </article>
+<% end %>

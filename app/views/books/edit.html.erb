@@ -1,0 +1,26 @@
+<h1>Book to edit: <%= @book.title  %></h1>
+
+<%= form_for(@book) do |b| %>
+	<p>
+		<%= b.label :title %>
+		<%= b.text_field :title %>
+	</p>
+	<p>
+		<%= b.label :author %>
+		<%= b.text_field :author %>
+	<p>
+		<%= b.label :isbn, 'ISBN' %>
+		<%= b.text_field :isbn %>
+	</p>
+	<p>
+		<%= b.label :description %>
+		<%= b.text_area :description, col: 40, row: 30 %>
+	</p>
+	<p>
+		<%= b.label :format %>
+		<%= b.text_field :format %>
+	</p>
+	<p>
+		<%= b.submit %>
+	</p>
+<% end %>
