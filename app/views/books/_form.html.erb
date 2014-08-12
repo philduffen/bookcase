@@ -1,0 +1,30 @@
+<%= form_for(@book) do |b| %>
+<%= render "shared/errors" %>
+	<p>
+		<%= b.label :title %>
+		<%= b.text_field :title, autofocus: true %>
+	</p>
+	<p>
+		<%= b.label :author %>
+		<%= b.text_field :author %>
+	<p>
+		<%= b.label :isbn, 'ISBN' %>
+		<%= b.text_field :isbn %>
+	</p>
+	<p>
+		<%= b.label :description %>
+		<%= b.text_area :description, col: 40, row: 30 %>
+	</p>
+	<p>
+		<%= b.label :format %>
+		<%= b.text_field :format %>
+	</p>
+	<p>
+		<%= b.label :image_file_name %><br>
+		<%= b.text_field :image_file_name, placeholder: "GIF, JPG or PNG file name" %>
+	</p>
+	<p>
+		<%= b.submit %> |
+		<%= link_to "Cancel", @book %>
+	</p>
+<% end %>

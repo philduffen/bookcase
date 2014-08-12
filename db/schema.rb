@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140716123616) do
+ActiveRecord::Schema.define(version: 20140804103051) do
 
   create_table "books", force: true do |t|
     t.string   "title"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20140716123616) do
     t.datetime "updated_at"
     t.text     "description"
     t.string   "format"
+    t.string   "image_file_name"
   end
 
 end

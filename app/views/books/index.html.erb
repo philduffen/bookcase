@@ -1,12 +1,16 @@
-<h1><%= pluralize(@books.size, 'Book') %></h1>
-
+<ul id="books">
 <% @books.each do |book| %>
-  <article>
+<p>
+<li>
+  <article class="book">
     <header>
-      <h2><%= link_to book.title, book_path(book.id) %></h2>
+      <%= image_for(book) %>
+      <p>
+        <p>
+      <h2><%= link_to book.title, book %></h2>
     </header>
-    <p>
-      <%= truncate(book.description, length: 40, separator: ' ') %>
+    <p>Description:
+      <%= truncate(book.description, length: 150, separator: ' ') %>
     </p>
     <table>
       <tr>
@@ -22,5 +26,8 @@
         <td><%= book.format %></td>
       </tr>
     </table>
+    <p>
   </article>
+  </li>
+  <p>
 <% end %>

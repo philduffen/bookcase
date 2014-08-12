@@ -26,7 +26,6 @@ describe "Viewing the list of books" do
  	visit books_url
 
 
-  	expect(page).to have_text("3 Books")
   	expect(page).to have_text("Refactoring: Ruby Edition")
   	expect(page).to have_text("The Rails 4 Way")
   	expect(page).to have_text("The Cucumber Book")
